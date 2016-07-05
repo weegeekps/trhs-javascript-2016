@@ -6,7 +6,7 @@ Site for the TR HS Summer JavaScript class in 2016.
 
 This is using Aurelia CLI and [more thorough instructions can be found in it's Github repo](https://github.com/aurelia/cli).
 
-*NOTICE: You must have Node.js version 4.x or later!*
+**NOTICE: You must have Node.js version 4.x or later!**
 
 1. `npm install aurelia-cli -g`
 2. `au run --watch` will bundle and start BrowserSync.
