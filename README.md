@@ -11,6 +11,6 @@ This is using Aurelia CLI and [more thorough instructions can be found in it's G
 1. `npm install aurelia-cli -g`
 2. `au run --watch` will bundle and start BrowserSync.
 3. `au generate <resource>` where resource is `element`, `attribute`, `value-converter`, `binding-behavior`, `task`, or `generator` will scaffold files.
-4. Read __Adding Client Libraries to Your Project__ [on the Aurelia CLI Github repo](https://github.com/aurelia/cli) if you want to add a third party module.
+4. Read _Adding Client Libraries to Your Project_ [on the Aurelia CLI Github repo](https://github.com/aurelia/cli) if you want to add a third party module.
 
 There are no unit tests for this project.
