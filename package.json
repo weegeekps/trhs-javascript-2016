@@ -14,7 +14,8 @@
     "aurelia-fetch-client": "^1.0.0-rc.1.0.0",
     "bluebird": "^3.4.1",
     "foundation-sites": "^6.2.3",
-    "jquery": "^3.0.0"
+    "jquery": "^3.0.0",
+    "jquery-migrate": "^3.0.0"
   },
   "peerDependencies": {},
   "devDependencies": {
