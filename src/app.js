@@ -17,7 +17,7 @@ export class App {
     }, {
       route: 'resources',
       name: 'resources',
-      moduleId: 'resources/resources.html',
+      moduleId: 'resources/resources',
       title: 'Resources',
       nav: true
     }]);

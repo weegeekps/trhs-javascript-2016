@@ -1,0 +1,160 @@
+<template>
+  <require from="resources/shared/code-block"></require>
+
+  <h1>Variables &amp; Conditionals</h1>
+
+  <h2>Introduction</h2>
+
+  <p>Variables &amp; conditionals are a cornerstone of all modern software
+  development. <b>Variables</b> allow us to make our programs store
+  information and perform actions on that information. <b>Conditionals</b>
+  allow us to make branching decisions based on comparisons and other actions
+  performed against variables.</p>
+
+  <p>In this lesson you will be learning about both of these important tools.
+  Please go step by step through each section and do not be afraid to ask
+  Adam or Kevin questions.</p>
+
+  <h2>Variables</h2>
+
+  <b>Variables</b> in the latest version of JavaScript come in three distinct
+  flavors. In the code block below we have declared three variables, each using
+  a different <i>declaration keyword.</i> We must always use one of these
+  keywords when declaring a new variables. Each keyword has a different
+  <b>scope</b>. Scoping allows us to limit where that variable can be seen, but
+  we will go more into that in a moment.
+
+  <code-block language="javascript">// The first two are the most important ones!
+
+// This declares a variable in local block scope.
+let localVariable;
+
+// This declares a variable in local block scope that cannot be changed.
+// We have to assign it a value when we declare it.
+const constantVariable = 'stuff';
+
+// This declares a variable in global scope, sometimes.
+// You should avoid using this last one as much as possible.
+var globalVariable;</code-block>
+
+  <p>Make note of the warning about the <code>var</code> keyword. Sometimes this
+  keyword will declare your variable in a <i>global</i> scope, but other times
+  it will declare within a <i>local block</i> scope. Confused? That's why it's not
+  recommended for use by anyone.</p>
+
+  <p>Most scoping in JavaScript uses what is called <b>block scoping</b>. A
+  <b>block</b> is the code between two curly braces.</p>
+
+  <code-block language="javascript">// Use { and } to define a block.
+
+// Outside the block.
+
+{
+  // Inside the block.
+}</code-block>
+
+  <p>JavaScript uses blocks for all sorts of control structures. Variables
+  declared inside a block using <code>let</code> or <code>const</code> can only
+  be accessed from within that block. However, variables declared outside of the
+  block can be accessed from within a block. The example below demonstrates this.</p>
+
+  <code-block language="javascript">let outsideVariable = 'foo';
+
+console.log(outsideVariable); // Output: foo
+
+{
+  console.log(outsideVariable); // Output: foo
+
+  let insideVariable = 'bar';
+
+  console.log(insideVariable); // Output: bar
+}
+
+console.log(insideVariable); // Output: ReferenceError: insideVariable is not defined</code-block>
+
+  <p>Beware of reusing variable names inside of your blocks. If you declare a
+  variable named <code>cat</code> with the value <code>"meow"</code> outside of
+  a block, then declared another variable also named <code>cat</code> with the
+  value <code>"bark"</code> it may become confusing to understand your code.</p>
+
+  <code-block language="javascript">let cat = "meow";
+
+console.log(cat); // Output: meow
+
+{
+  console.log(cat); // Output: meow
+
+  let cat = "bark";
+
+  console.log(cat); // Output: bark
+}
+
+console.log(cat); // Output: meow</code-block>
+
+  <p>Variables alone don't make for useful programs. In order to create useful
+  programs we need to be able to make decisions on the values stored in our
+  variables. We call these <b>control structures</b>. The first of these that we
+  will be looking at are called <b>conditionals</b>.</p>
+
+  <p><b>Conditionals</b> perform different actions based on the state of a
+  <b>boolean</b> value. <b>Booleans</b> can be either true or false. We can
+  assign our variables a <b>boolean</b> value using the <code>true</code> or
+  <code>false</code> keywords, or we can use a <b>comparison operator</b> to
+  create a boolean based on the conditions of a variable.</p>
+
+  <code-block language="javascript">// Equality comparison operators
+
+let foo = true;
+
+// === checks to see if two values are equal.
+// !== checks to see if two values are NOT equal.
+
+console.log(foo === true); // Output: true
+
+console.log(foo !== true); // Output: false
+
+console.log(foo === 'bar'); // Output: false</code-block>
+
+  <p>We can compare numbers, strings, booleans, variables, and even objects in
+  JavaScript. When comparing numbers there are several other <b>comparison
+  operators</b> that are useful for us.</p>
+
+  <code-block language="javascript">// Relational comparison operators
+
+let foo = 3;
+let bar = 6;
+let three = 3;
+
+// > checks to see if the first value is greater than the second.
+// >= checks to see if the first value is greater than or equal than the second.
+// < checks to see if the first value is less than the second.
+// <= checks to see if the first value is less than or equal to the second.
+
+console.log(foo > bar); // 3 > 6 Output: false
+
+console.log(foo >= three); // 3 >= 3 Output: true
+
+console.log(foo < bar); // 3 < 6 Output: true
+
+console.log(foo <= three); // 3 <= 3 Output: true</code-block>
+
+  <p>We can use these <b>comparison operators</b> with our <b>conditionals</b>
+  to dictate which path of a <b>conditional</b> our code uses. The most basic
+  <b>conditional</b> in JavaScript is the <code>if-else</code> statement. If
+  you've used other programming languages before you are likely familiar with
+  this statement.</p>
+
+  <code-block language="javascript">// If Else Statement
+
+// Using a block like this defines an object.
+let animal = {
+  type: 'cat'
+};
+
+if (animal.type === 'cat') {
+  console.log('meow');
+}
+
+// The output of this program would be 'meow'
+</code-block>
+</template>

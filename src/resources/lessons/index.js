@@ -3,16 +3,16 @@ export class LessonsIndex {
     this.router = router;
 
     config.map([{
-      route: ['', 'introduction'],
-      name: 'introduction',
-      moduleId: 'resources/lessons/introduction',
-      title: 'Introduction',
-      nav: true
-    }, {
-      route: 'setup',
+      route: ['', 'setup'],
       name: 'setup',
       moduleId: 'resources/lessons/setup',
-      title: 'Setup',
+      title: '1. Setup',
+      nav: true
+    }, {
+      route: 'variables',
+      name: 'variables-conditionals',
+      moduleId: 'resources/lessons/variables-conditionals',
+      title: '2. Variables & Conditionals',
       nav: true
     }]);
   }
