@@ -1,0 +1,12 @@
+<template>
+  <require from="resources/lessons/navigation"></require>
+
+  <div class="row">
+    <div class="lessons-navigation-column">
+      <lessons-navigation router.bind="router"></lessons-navigation>
+    </div>
+    <div class="columns medium-9">
+      <router-view></router-view>
+    </div>
+  </div>
+</template>

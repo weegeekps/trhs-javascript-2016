@@ -2,6 +2,18 @@
 
 @include foundation-everything(true);
 
-.navigation-column {
-  @include flex-grid-column(null, 0)
+.content-body {
+  box-shadow: 0 0 10px 1px #dddddd;
+  min-height: 100%;
+
+  .top-bar {
+    margin: {
+      right: -1rem;
+      left: -1rem;
+    };
+  }
+}
+
+.lessons-navigation-column {
+  @include flex-grid-column(null, 3)
 }
