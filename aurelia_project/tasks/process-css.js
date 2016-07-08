@@ -9,7 +9,9 @@ export default function processCSS() {
   return gulp.src(project.cssProcessor.source)
     .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['./node_modules/foundation-sites/scss/']
+      includePaths: [
+        './node_modules/foundation-sites/scss/'
+      ]
     }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']

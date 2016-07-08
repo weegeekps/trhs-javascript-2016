@@ -1,3 +1,7 @@
 @import 'foundation';
 
 @include foundation-everything(true);
+
+.navigation-column {
+  @include flex-grid-column(null, 0)
+}

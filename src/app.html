@@ -1,9 +1,10 @@
 <template>
   <require from="styles/app.css"></require>
+  <require from="resources/shared/navigation"></require>
 
   <div class="row">
-    <div class="columns medium-3">
-      <p>navigation here</p>
+    <div class="navigation-column medium-3">
+      <navigation router.bind="router"></navigation>
     </div>
     <div class="columns medium-9">
       <router-view></router-view>

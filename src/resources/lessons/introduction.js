@@ -1,3 +1,3 @@
-export class IntroductionView {
+export class IntroductionLesson {
 
 }
