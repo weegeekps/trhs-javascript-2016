@@ -14,6 +14,12 @@ export class LessonsIndex {
       moduleId: 'resources/lessons/variables-conditionals',
       title: '2. Variables & Conditionals',
       nav: true
+    }, {
+      route: 'html-css',
+      name: 'html-css',
+      moduleId: 'resources/lessons/html-css',
+      title: '5. HTML & CSS',
+      nav: true
     }]);
   }
 }
