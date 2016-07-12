@@ -3,5 +3,151 @@
   
   <h1>HTML &amp; CSS</h1>
   
-  <p>TODO: (KTP) Write lesson</p>
+  <h2>Introduction</h2>
+  
+  <p>
+    <b>HTML</b> stands for <i>HyperText Markup Language</i>. Put simply, it is
+    the language we use to write content in web pages.
+  </p>
+  
+  <p>
+    HTML is made up of <b>elements</b>, which are in turn composed of
+    <b>tags</b> and <b>content</b>. A <i>tag</i> is written as one or more words
+    within <i>angle brackets</i>, such as <code>&lt;b&gt;</code> or
+    <code>&lt;a href="http://google.com"&gt;</code>. Tags can enclose
+    <i>content</i>, which may be text or more elements. When a tag has content
+    inside of it, we usually need to write a <i>closing tag</i>, which is
+    similar to the tag that comes before the content, except that it has a
+    leading forward slash.
+  </p>
+  
+  <p>Here are some examples:</p>
+  
+  <code-block language="html">
+&lt;p&gt;This is a paragraph of text. A "p" tag is used to mark a paragraph.&lt;/p&gt;
+
+&lt;b&gt;This is bold text, using a "b" tag.&lt;/b&gt;
+
+&lt;p&gt;Some HTML elements can be used &lt;b&gt;inside&lt;/b&gt; of other elements!&lt;/p&gt;
+  </code-block>
+  
+  <p>
+    Whitespace in the text between tags is collapsed:
+  </p>
+  
+  <code-block language="html">
+&lt;p&gt;This paragraph will look the same as the others in a browser.&lt;/p&gt;
+
+&lt;p&gt;This      paragraph      will      look      the      same      as      the      others      in      a      browser.&lt;/p&gt;
+
+&lt;p&gt;
+  This
+  paragraph
+  will
+  look
+  the
+  same
+  as
+  the
+  others
+  in
+  a
+  browser.
+&lt;/p&gt;
+  </code-block>
+  
+  <p>
+    When we have a lot of content inside a tag, it's always a good idea to add
+    some spacing in the HTML file to make it readable.
+  </p>
+  
+  <p>
+    HTML documents have the same structure:
+  </p>
+  
+  <code-block language="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <p>
+    At the top of an HTML document is the <b>document type declaration</b>.
+    This tells a web browser what kind of HTML is being used. This used to be
+    very specific, but it is sufficient to write <code>&lt;!DOCTYPE html&gt;</code>
+    for modern HTML.
+  </p>
+  
+  <p>
+    Below the document type declaration is the <b>document head</b>. Nothing in
+    the document head is visible when a user views the page. The purpose of the
+    document head section is to put in <i>metadata</i> about the page and to
+    reference <i>stylesheets</i> and <i>scripts</i> that the page depends on.
+  </p>
+  
+  <p>
+    Underneath the document head is the <b>document body</b>. This is where the
+    main content of the page goes.
+  </p>
+  
+  <p>
+    Here is a full example of a simple page:
+  </p>
+  
+  <code-block>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Example Web Page&lt;/tile&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    
+    &lt;p&gt;
+      This is a paragraph on my web page.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+      Here is another one, with &lt;b&gt;bold&lt;/b&gt; and &lt;i&gt;italic&lt;/i&gt; text.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <p>
+    Below is how the page would roughly look in a (small) browser:
+  </p>
+  
+  <div style="border:thin dotted #666666; padding: 1.0em">
+    <h1>Welcome!</h1>
+    
+    <p>This is a paragraph on my web page.</p>
+    
+    <p>
+      Here is another one, with <b>bold</b> and <i>italic</i> text.
+    </p>
+  </div>
+  
+  <hr />
+  
+  <p>
+    When we need to specify some extra data about the tag (that isn't text we
+    want visible on the page), we use <b>attributes</b> to provide that data.
+    For example, an <i>anchor tag</i> is used to create a <i>hyperlink</i> to
+    another page. But how does the browser know where the user should be taken
+    when the user clicks on the hyperlink? We can tell the browser what page
+    the user should be sent to using the <i>href</i> attribute on an
+    <code>&lt;a&gt;</code> tag:
+  </p>
+
+  <code-block language="html">
+&lt;a href="http://google.com"&gt;Link to Google.com&lt;/a&gt;
+  </code-block>
 </template>
