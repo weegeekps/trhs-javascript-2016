@@ -31,6 +31,8 @@
 &lt;p&gt;Some HTML elements can be used &lt;b&gt;inside&lt;/b&gt; of other elements!&lt;/p&gt;
   </code-block>
   
+  <h2>Whitespace in HTML</h2>
+  
   <p>
     Whitespace in the text between tags is collapsed:
   </p>
@@ -62,6 +64,15 @@
   </p>
   
   <p>
+    What about in tags themselves? That's a little more complicated. To be safe,
+    just use single spaces inside tags:
+  </p>
+  
+  <code-block language="html">&lt;h1 class=&quot;spacing matters&quot;&gt;Spacing     doesn't    matter here!&lt;/h1&gt;</code-block>
+  
+  <h2>Structure of an HTML Document</h2>
+  
+  <p>
     HTML documents have the same structure:
   </p>
   
@@ -78,12 +89,16 @@
 &lt;/html&gt;
   </code-block>
   
+  <h3>Document Type Declaration (<code>&lt;!DOCTYPE html&gt;</code>)</h3>
+  
   <p>
     At the top of an HTML document is the <b>document type declaration</b>.
     This tells a web browser what kind of HTML is being used. This used to be
     very specific, but it is sufficient to write <code>&lt;!DOCTYPE html&gt;</code>
     for modern HTML.
   </p>
+  
+  <h3>Document Head</h3>
   
   <p>
     Below the document type declaration is the <b>document head</b>. Nothing in
@@ -93,8 +108,29 @@
   </p>
   
   <p>
+    The document head is where the <b>document title</b> is specified. The
+    document title usually appears at the top of the browser window, outside of
+    the page itself. We can choose a title using the <code>&lt;title&gt;</code>
+    tag.
+  </p>
+  
+  <p>Example title:</p>
+  
+  <code-block language="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title Goes Here&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <h3>Document Body</h3>
+  
+  <p>
     Underneath the document head is the <b>document body</b>. This is where the
-    main content of the page goes.
+    main content of the page goes. There are a decent number of HTML tags we can
+    use to present our content. Most of them are pretty simple, don't worry.
   </p>
   
   <p>
@@ -125,6 +161,7 @@
     Below is how the page would roughly look in a (small) browser:
   </p>
   
+  <!-- TODO: Find a better way to style this and extract into CSS -->
   <div style="border:thin dotted #666666; padding: 1.0em">
     <h1>Welcome!</h1>
     
@@ -135,7 +172,13 @@
     </p>
   </div>
   
+  <h2>Presenting Content with HTML Tags</h2>
+  
+  <p>TODO: Write content!</p>
+  
   <hr />
+  
+  <p>TODO: See if the below can fit in somewhere or not.</p>
   
   <p>
     When we need to specify some extra data about the tag (that isn't text we
