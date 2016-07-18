@@ -174,7 +174,190 @@
   
   <h2>Presenting Content with HTML Tags</h2>
   
-  <p>TODO: Write content!</p>
+  <p>
+    We have already mentioned that <i>paragraphs</i> of text can be represented
+    with the <code>&lt;p&gt;</code> tag. Here are a few other ways to organize
+    text:
+  </p>
+  
+  <ul>
+    <li>Unordered lists</li>
+    <li>Ordered lists</li>
+    <li>Grouped via headers</li>
+  </ul>
+  
+  <h3>Unordered lists</h3>
+  
+  <p>
+    There are three types of lists in HTML: <b>unordered lists</b>,
+    <b>ordered lists</b>, and <b>definition lists</b>. Of these, only the first
+    two are commonly used, so we won't mention definition lists again.
+  </p>
+  
+  <p>
+    <i>Unordered lists</i> are lists where the order of the content is not
+    particularly important. These are represented as <i>bullet lists</i>, such
+    as the one above the beginning of this section.
+  </p>
+  
+  <p>
+    Unordered lists are surrounded by a <code>&lt;ul&gt;</code> opening tag and
+    a <code>&lt;/ul&gt;</code> closing tag. (Think &quot;ul&quot; equals
+    &quot;unordered list&quot;.) Each list item is surrounded by a
+    <code>&lt;li&gt;</code> opening tag and <code>&lt;/li&gt;</code> closing
+    tag.
+  </p>
+  
+  <p>
+    Here is an example:
+  </p>
+  
+  <code-block language="html">
+&lt;p&gt;Key ingredients in apple juice:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Juice&lt;/li&gt;
+  &lt;li&gt;A bunch of preservatives and additives&lt;/li&gt;
+&lt;/ul&gt;
+  </code-block>
+  
+  <h3>Unordered lists</h3>
+  
+  <p>
+    <i>Ordered lists</i>, in contrast, are lists where the order of the content
+    is important. These are represented as <i>numbered lists</i>.
+  </p>
+  
+  <p>
+    Ordered lists are surrounded by a <code>&lt;ol&gt;</code> opening tag and
+    a <code>&lt;/ol&gt;</code> closing tag. (Think &quot;ol&quot; equals
+    &quot;ordered list*quot;.) Each list item is surrounded by a
+    <code>&lt;li&gt;</code> opening tag and <code>&lt;/li&gt;</code> closing
+    tag, just like in unordered lists.
+  </p>
+  
+  <p>
+    Here is an example:
+  </p>
+  
+  <code-block language="html">
+&lt;p&gt;How to make apple juice:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Acquire some apples.&lt;/li&gt;
+  &lt;li&gt;Cut the skin off the apples using a paring knife.&lt;/li&gt;
+  &lt;li&gt;Cut the core out of the apples using a paring knife.&lt;/li&gt;
+  &lt;li&gt;Put the apple slices into a food processor.&lt;/li&gt;
+  &lt;li&gt;Add juice.&lt;/li&gt;
+  &lt;li&gt;Add additives and preservatives.&lt;/li&gt;
+&lt;/ol&gt;
+  </code-block>
+  
+  <p>
+    <b><i>Disclaimer:</i></b> This is not a cooking class and we make no
+    representation of the accuracy of any cooking suggestions.
+  </p>
+  
+  <h3>Headers</h3>
+  
+  <p>
+    There are six different header tags, each representing a different level
+    of heading for your content:
+  </p>
+  
+  <ul>
+    <li><code>&lt;h1&gt;&lt;/h1&gt;</code></li>
+    <li><code>&lt;h2&gt;&lt;/h2&gt;</code></li>
+    <li><code>&lt;h3&gt;&lt;/h3&gt;</code></li>
+    <li><code>&lt;h4&gt;&lt;/h4&gt;</code></li>
+    <li><code>&lt;h5&gt;&lt;/h5&gt;</code></li>
+    <li><code>&lt;h6&gt;&lt;/h6&gt;</code></li>
+  </ul>
+  
+  <p>
+    Higher header numbers mean levels of subheading/nesting. In other words,
+    <code>&lt;h1&gt;</code> is biggest and <code>&lt;h6&gt;</code> is smallest.
+  </p>
+  
+  <p>
+    You can use headers to intelligently group text together, and even to put
+    groups in a larger group. In fact, we are using <code>&lt;h1&gt;</code>
+    through <code>&lt;h3&gt;</code> on this page to group all of the content
+    together!
+  </p>
+  
+  <p>
+    Here is an example of how you can use headers to group content:
+  </p>
+  
+  <code-block language="html">
+&lt;DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;All About Apple Juice
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    &lt;h1&gt;Everything I Know About Apple Juice&lt;/h1&gt;
+    
+    &lt;h2&gt;Ingredients&lt;/h2&gt;
+    
+    &lt;p&gt;Key ingredients in apple juice:&lt;/p&gt;
+    
+    &lt;ul&gt;
+      &lt;li&gt;Apples&lt;/li&gt;
+      &lt;li&gt;Juice&lt;/li&gt;
+      &lt;li&gt;A bunch of preservatives and additives&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;Making Apple Juice&lt;/h2&gt;
+    
+    &lt;p&gt;How to make apple juice:&lt;/p&gt;
+    
+    &lt;ol&gt;
+      &lt;li&gt;Acquire some apples.&lt;/li&gt;
+      &lt;li&gt;Cut the skin off the apples using a paring knife.&lt;/li&gt;
+      &lt;li&gt;Cut the core out of the apples using a paring knife.&lt;/li&gt;
+      &lt;li&gt;Put the apple slices into a food processor.&lt;/li&gt;
+      &lt;li&gt;Add juice.&lt;/li&gt;
+      &lt;li&gt;Add additives and preservatives.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <p>
+    Which would look something like this in a browser:
+  </p>
+  
+  <!-- TODO: Find a better way to style this and extract into CSS -->
+  <div style="border:thin dotted #666666; padding: 1.0em">
+    <h1>Everything I Know About Apple Juice</h1>
+    
+    <h2>Ingredients</h2>
+    
+    <p>Key ingredients in apple juice:</p>
+    
+    <ul>
+      <li>Apples</li>
+      <li>Juice</li>
+      <li>A bunch of preservatives and additives</li>
+    </ul>
+    
+    <h2>Making Apple Juice</h2>
+    
+    <p>How to make apple juice:</p>
+    
+    <ol>
+      <li>Acquire some apples.</li>
+      <li>Cut the skin off the apples using a paring knife.</li>
+      <li>Cut the core out of the apples using a paring knife.</li>
+      <li>Put the apple slices into a food processor.</li>
+      <li>Add juice.</li>
+      <li>Add additives and preservatives.</li>
+    </ol>
+  </div>
   
   <hr />
   
