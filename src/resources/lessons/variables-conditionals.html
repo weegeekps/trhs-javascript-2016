@@ -96,6 +96,8 @@ console.log(cat); // Output: meow</code-block>
   variables. We call these <b>control structures</b>. The first of these that we
   will be looking at are called <b>conditionals</b>.</p>
 
+  <h2>Conditionals</h2>
+
   <p><b>Conditionals</b> perform different actions based on the state of a
   <b>boolean</b> value. <b>Booleans</b> can be either true or false. We can
   assign our variables a <b>boolean</b> value using the <code>true</code> or
@@ -140,11 +142,11 @@ console.log(foo <= three); // 3 <= 3 Output: true</code-block>
 
   <p>We can use these <b>comparison operators</b> with our <b>conditionals</b>
   to dictate which path of a <b>conditional</b> our code uses. The most basic
-  <b>conditional</b> in JavaScript is the <code>if-else</code> statement. If
+  <b>conditional</b> in JavaScript is the <code>if</code> statement. If
   you've used other programming languages before you are likely familiar with
   this statement.</p>
 
-  <code-block language="javascript">// If Else Statement
+  <code-block language="javascript">// If Statement
 
 // Using a block like this defines an object.
 let animal = {
@@ -157,4 +159,125 @@ if (animal.type === 'cat') {
 
 // The output of this program would be 'meow'
 </code-block>
+
+  <p>A similar and related statement is the <code>if-else</code> statement. This
+  statement allows you to branch your code into two separate paths, based on
+  whether or not a conditional evaluates to <i>true</i> or <i>false</i></p>
+
+  <code-block>//If Else Statement
+
+let animal = {
+  type: 'dog'
+};
+
+if (animal.type === 'cat') {
+  console.log('meow');
+} else {
+  console.log('woof');
+}
+
+// The output of this program would be 'woof'
+  </code-block>
+
+  <p>In the example above, since the <code>animal.type</code> is a
+  <code>'dog'</code>, the output is <i>woof</i>. It's often good to provide a
+  more explicit definition for each expected case. Take a look at this
+  example, which is the same as above with one change:</p>
+
+  <code-block>//Changed If Else Statement
+
+let animal = {
+  type: 'pig' // Here's the change!
+};
+
+if (animal.type === 'cat') {
+  console.log('meow');
+} else {
+  console.log('woof');
+}
+
+// The output of this program would be 'woof'
+  </code-block>
+
+  <p>Pig's don't woof! We can correct this by using an <code>if-else-if</code>
+  statement to explicitly define an option. We can use the <code>else</code>
+  block for our <b>default</b> case.</p>
+
+  <code-block>//If Else If Statement
+
+let animal = {
+  type: 'pig' // Still a pig!
+};
+
+if (animal.type === 'cat') {
+  console.log('meow');
+} else if (animal.type === 'dog') {
+  console.log('woof');
+} else if (animal.type === 'pig') {
+  console.log('oink');
+} else {
+  console.log('This animal is silent');
+}
+
+// The output of this program would be 'oink'
+  </code-block>
+
+  <p>Using a long <code>if-else-if</code> chain like the one above is often
+  difficult to read and understand, so JavaScript gives us another statement to
+  make this easier. This statement is called a <code>switch</code>.</p>
+
+  <code-block>//Switch Statement
+
+let animal = {
+  type: 'pig' // Still a pig!
+};
+
+switch (animal.type) {
+  case 'cat':
+    console.log('meow');
+    break;
+  case 'dog':
+    console.log('woof');
+    break;
+  case 'pig':
+    console.log('oink');
+    break;
+  default:
+    console.log('This animal is silent');
+}
+
+// The output of this program would be 'oink'
+  </code-block>
+
+  <p>An important part of the <code>switch</code> statement syntax is the use
+  of the <code>break</code> statement. This is required, otherwise your code
+  will <b>fall-through</b> to subsequent cases.</p>
+
+  <code-block>//Switch Statement without Break
+
+let animal = {
+  type: 'cat' // Now a cat
+};
+
+switch (animal.type) {
+  case 'cat':
+    console.log('meow');
+  case 'dog':
+    console.log('woof');
+  case 'pig':
+    console.log('oink');
+  default:
+    console.log('This animal is silent');
+}
+
+// The output of this program would be:
+//  meow
+//  woof
+//  oink
+/   This animal is silent
+  </code-block>
+
+  <h1>Exercises</h1>
+
+  <p>TODO</p>
 </template>
