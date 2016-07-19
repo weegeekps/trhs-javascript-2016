@@ -409,21 +409,128 @@
     very soon, are much more efficient for that task.
   </p>
   
-  <hr />
-  
-  <p>TODO: See if the below can fit in somewhere or not.</p>
+  <h2>Linking to Different Pages</h2>
   
   <p>
-    When we need to specify some extra data about the tag (that isn't text we
-    want visible on the page), we use <b>attributes</b> to provide that data.
-    For example, an <i>anchor tag</i> is used to create a <i>hyperlink</i> to
-    another page. But how does the browser know where the user should be taken
-    when the user clicks on the hyperlink? We can tell the browser what page
-    the user should be sent to using the <i>href</i> attribute on an
-    <code>&lt;a&gt;</code> tag:
+    Everything we have done so far has helped us write content onto a single
+    page. While there is nothing stopping you from writing your autobiography
+    onto a single web page, it's a much better idea to separate your content
+    into multiple pages. That way, you can control how you want to present each
+    page, and you can even make suggestions to your users about what content to
+    view next, but your users have the freedom to browse your content in the
+    way that makes the most sense to them.
   </p>
-
+  
+  <p>
+    That's beautiful and all, but there's no point in separating your content
+    into different pages if your users can't jump between those pages. Enter
+    <b>hyperlinks</b>, or <b>links</b> for short. HTML's greatest strength is
+    its ability to seamlessly link content pages together. This is primary done
+    using the <b>anchor tag</b> (<code>&lt;a&gt;</code>).
+  </p>
+  
+  <p>
+    Let's start with an example:
+    <code>&lt;a href="http://google.com"&gt;Google!&lt;/a&gt;</code>
+  </p>
+  
+  <p>
+    The first thing you might have noticed is the extra stuff in the opening
+    <code>&lt;a&gt;</code> tag. That is an <b>attribute</b>, which is used for
+    giving web browsers extra information about the element without showing it
+    directly to the user.
+  </p>
+  
+  <p>
+    In this case, the <i>href attribute</i> tells a web browser what page it
+    should show the user next if the user clicks on the hyperlink. The
+    <i>text</i> of a hyperlink is completely irrelevant in determining the
+    page the user sees when he or she clicks on the link.
+  </p>
+  
+  <p>
+    For example, the link below will <i>not</i> take the user to the Trustworthy
+    Bank:
+  </p>
+  
   <code-block language="html">
-&lt;a href="http://google.com"&gt;Link to Google.com&lt;/a&gt;
+&lt;a href="http://fraudsters.com"&gt;My Trustworthy Bank Account&lt;/a&gt;
   </code-block>
+  
+  <p>
+    Building hyperlinks that go to unexpected websites is one of the more basic
+    techniques cyber-criminals use to try to trick people into sharing private
+    information. Make sure your friends and family know to hover over links and
+    read the web address in the corner of the browser before clicking!
+  </p>
+  
+  <h3>Pointing to Different Pages</h3>
+  
+  <p>
+    We've seen that the <i>href attribute</i> of an <i>anchor tag</i> is how we
+    direct users to other pages. But how can we specify those pages? The answer
+    is we use one of three different kinds of <b>URLs</b> (uniform resource
+    locators):
+  </p>
+  
+  <ul>
+    <li>
+      An <b>absolute URL</b> is a long URL that includes the <i>hostname</i>
+      for a site, as well as the full <i>path</i> to the desired page or
+      resource. (Example: <code>http://github.com/platinumazure</code>)
+    </li>
+    <li>
+      A <b>virtual URL</b> is a URL that begins with a forward slash. Virtual
+      URLs resolve to a URL on the same <i>hostname</i>, but replace the entire
+      <i>path</i>. For example, if you are currently visiting
+      <code>https://github.com/weegeekps</code>, a link with href of
+      <code>/platinumazure</code> would take you to the
+      <code>https://github.com/platinumazure</code> page.
+    </li>
+    <li>
+      A <b>relative URL</b> is a URL that is interpreted as <i>relative to</i>
+      the current page.
+    </li>
+  </ul>
+      
+  <p>
+    There are a few different flavors of relative URLs:
+  </p>
+  
+  <ul>
+    <li>
+      <code>../../some/other/path</code>: Go "up" two levels of the path
+      (remove the two rightmost path segments), then add the some/other/path
+      segments. <code>http://example.com/foo/bar</code> becomes
+      <code>http://example.com/some/other/path</code>.
+    </li>
+    <li>
+      <code>./somePage.html</code>: Look for "somePage.html" with the same
+      path segments as the current page (up to the last segment).
+      <code>http://example.com/foo/bar.html</code> becomes
+      <code>http://example.com/foo/somePage.html</code>.
+    </li>
+    <li>
+      <code>somePage.html</code> (with no dots or slashes prefixing): This
+      is the same as <code>./somePage.html</code>, in that it uses the path
+      segments of your current page except the last segment.
+    </li>
+  </ul>
+  
+  <p>
+    Which type is the correct one to use? Well, that depends on the situation.
+    An <i>external link</i>, which is a hyperlink going to a different website,
+    must use an absolute URL. When you don't want to use an absolute URL, either
+    a virtual URL or a relative URL will work just fine (and in general, as long
+    as you don't move your website to a different hostname, it is possible to
+    convert between virtual and relative URLs interchangeably).
+  </p>
+  
+  <h2>Images</h2>
+  
+  <p>TODO: Should we even do this?</p>
+  
+  <h2>Using CSS to Style Your Content</h2>
+  
+  <p>TODO: Write content.</p>
 </template>
