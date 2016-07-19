@@ -172,7 +172,7 @@
     </p>
   </div>
   
-  <h2>Presenting Content with HTML Tags</h2>
+  <h2>Presenting Content</h2>
   
   <p>
     We have already mentioned that <i>paragraphs</i> of text can be represented
@@ -358,6 +358,56 @@
       <li>Add additives and preservatives.</li>
     </ol>
   </div>
+  
+  <h2>Emphasizing Content</h2>
+  
+  <p>
+    We have already seen two tags for emphasizing content: the
+    <code>&lt;b&gt;</code> (bold) tag, and the <code>&lt;i&gt;</code> (italic)
+    tag. Just like in a word processor, bold text is darker and thicker, and
+    italic text is artfully sloped.
+  </p>
+  
+  <p>
+    You can also write underlined text using a <code>&lt;u&gt;</code> tag.
+    However, underlined text is very uncommon on the Web. In general, unless you
+    are following a style guide which requires underlining certain things, you
+    can just use bold and italic text.
+  </p>
+  
+  <p>
+    For all three of these tags, simply use them around text that needs to be
+    emphasized. This works in paragraphs and lists, as well as pretty much
+    anywhere else. See below:
+  </p>
+  
+  <code-block language="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Emphasizing text&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+      This paragraph has &lt;b&gt;bold&lt;/b&gt; text.
+      This paragraph also has &lt;i&gt;italic&lt;/i&gt; text.
+    &lt;/p&gt;
+    
+    &lt;ul&gt;
+      &lt;li&gt;Something &lt;b&gt;important.&lt;b&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;i&gt;Another&lt;/i&gt; important thing.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <p>
+    <i><b>Warning:</b></i> It might be tempting to use bold or italic text on
+    entire paragraphs to make them stand out. If we can't convince you that
+    "less is more" when it comes to content emphasis, at least let us convince
+    you not to use the tags. <i>Cascading style sheets</i>, which we will cover
+    very soon, are much more efficient for that task.
+  </p>
   
   <hr />
   
