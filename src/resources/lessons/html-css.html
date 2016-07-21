@@ -859,4 +859,76 @@ p {
     rule. Any style properties declared in the rule will be applied to the one
     element with the ID used in the rule.
   </p>
+  
+  <h3>Properties</h3>
+  
+  <p>
+    In a CSS rule, <b>properties</b> are how we describe the actual styles we
+    want to apply to a set of elements matched by a selector.
+  </p>
+  
+  <p>
+    There are a lot of properties, and unfortunately we don't have time to teach
+    even one tenth of them. But we will give you three highly useful properties.
+    If you want to learn more, you can go to our Resources page and bookmark
+    the links in the CSS section.
+  </p>
+  
+  <h4>Text Color</h4>
+  
+  <p>
+    You can set the text color for elements matched by a selector using the
+    <code>color</code> property, such as <code>color: red;</code>.
+  </p>
+  
+  <p>
+    There are a few ways to represent colors in CSS. Many colors can be named
+    (such as red), see the Resources page for more details.
+  </p>
+  
+  <p>
+    You can also use a <b>rgb representation</b> if you want to fine-tune your
+    colors, by representing the color using its red, green, and blue components.
+    Each component can be a value between 0 and 255. Here is an example for
+    dark gray:
+  </p>
+  
+  <code-block language="css">
+p {
+  color: rgb(64, 64, 64);
+}
+  </code-block>
+  
+  <h4>Background Color</h4>
+  
+  <p>
+    You can set the background color for elements matched by a selector using
+    the <code>background-color</code> property, such as
+    <code>background-color: black;</code>. Background colors can be represented
+    the same way as text colors.
+  </p>
+  
+  <h4>Text alignment</h4>
+  
+  <p>
+    You can set the horizontal alignment of text in elements matched by a
+    selector using the <code>text-align</code> property, such as
+    <code>text-align: right;</code>. For this property, you can use
+    <code>left</code>, <code>center</code>, or <code>right</code> as values.
+  </p>
+  
+  <p>
+    Here is an example:
+  </p>
+  
+  <code-block language="css">
+.right {
+  text-align: right;
+}
+  </code-block>
+  
+  <h1>Exercises</h1>
+  
+  <p>TODO: Write exercises.</p>
+  
 </template>
