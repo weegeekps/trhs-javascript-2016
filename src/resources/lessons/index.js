@@ -42,7 +42,7 @@ export class LessonsIndex {
       route: 'clock-project',
       name: 'clock-project',
       moduleId: 'resources/lessons/clock-project',
-      title: '8. Clock Project',
+      title: '7. Clock Project',
       nav: true
     }]);
   }

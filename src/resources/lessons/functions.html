@@ -12,9 +12,76 @@
 
   <h2>Declaring Functions</h2>
 
-  <p>To declare a function we can use the <code>function</code> keyword.</p>
+  <p>To declare a function we can use the <code>function</code> keyword. We
+  must provide a <b>name</b> for the function as well.</p>
 
-  <h2>Parameters</h2>
+  <code-block language="javascript">function foobar() {
+    console.log('foobar!');
+  }</code-block>
+
+  <p>In the example above we've created a <b>function</b> named
+  <code>foobar</code> which prints the line "foobar!". This is the most basic
+  kind of function, and inside of the function block we can write any code we
+  want. In order to <b>execute</b> the function we must <b>call</b> it.</p>
+
+  <code-block language="javascript">foobar(); // Output: foobar!</code-block>
+
+  <p>We can call our function multiple times and the output will be the same.</p>
+
+  <code-block language="javascript">foobar(); // Output: foobar!
+foobar(); // Output: foobar!</code-block>
+
+  <h2>Parameters & Arguments</h2>
+
+  <p>Functions are most powerful however for performing an action based on
+  <b>inputs</b> we provide. Those inputs are called <b>parameters</b>, and we
+  define them when we declare our function. When we define parameters, we must
+  then also pass them as <b>arguments</b> to our function calls.</p>
+
+  <code-block language="javascript">function hello(name) {
+    console.log('Hello ' + name + '!');
+}
+
+hello('dude'); // Output: Hello dude!</code-block>
+
+  <p>We can have any number of parameters, and in JavaScript any extra
+  parameters are ignored.</p>
+
+  <code-block language="javascript">function hello(name) {
+    console.log('Hello ' + name + '!');
+}
+
+hello('buddy', 'dude'); // Output: Hello buddy!</code-block>
 
   <h2>Return Statements</h2>
+
+  <p>We can also <b>return</b> data from our functions. In order to do so we use
+  the <code>return</code> keyword.</p>
+
+  <code-block language="javascript">function helloString(name) {
+  return 'Hello ' + name + '!');
+}
+
+const message = hello('gal');
+console.log(message); // Output: Hello gal!</code-block>
+
+  <h1>Exercises</h1>
+
+  <ol>
+    <li>
+      Create a function which returns a random number every time it is called.
+      You can use the code below to generate a random number.
+
+      <code-block language="javascript">Math.random(); // Generates a random number.</code-block>
+    </li>
+    <li>
+      Create a function that accepts an object of the following format and makes
+      the pet speak the appropriate sound. Hint: You can use code from the
+      conditionals section to help you here.
+
+      <code-block language="javascript">const pet = {
+  type: 'pig'
+}</code-block>
+    </li>
+  </ol>
 </template>
