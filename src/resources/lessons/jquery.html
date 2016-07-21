@@ -192,9 +192,75 @@ $("p")                    // &lt;-- Selects all paragraphs on the page
 &lt;/html&gt;
   </code-block>
   
+  <h2>Iterating in jQuery</h2>
+  
+  <p>
+    Everything we have seen in jQuery so far has involved manipulating (or
+    creating event handlers for) all elements matched by a jQuery selector.
+    We haven't needed to work with individual matched elements, because we just
+    wanted to turn all of the paragraphs red (or set up a click event handler
+    on all of them). But what if we did need to work with the matched elements?
+  </p>
+  
+  <p>
+    jQuery supports <b>iterating</b> over elements. This means we can use a
+    selector to get some elements, then work on them one at a time.
+  </p>
+  
+  <p>
+    Here's an example, where we will count the number of characters in each
+    paragraph and append that count to the end of each paragraph:
+  </p>
+  
+  <code-block language="html">
+&lt;DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="//code.jquery.com/jquery-3.1.0.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is another paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is one last paragraph of text.&lt;/p&gt;
+    
+    &lt;script type="text/javascript"&gt;
+      $(function () {
+        $("p").each(function () {                   // For each paragraph...
+          const originalText = $(this).text(),      // Get this paragraph's text,
+            length = originalText.length;           // and the length of that text.
+            
+          // Append " (N characters)" to the end of the paragraph.
+          $(this).text(originalText + " (" + length + " characters)");
+        };
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
   <h1>Exercises</h1>
   
   <ol>
+    <li>
+      Write a jQuery selector call (<code>$(something)</code>) for each of the
+      following cases:
+      <ul>
+        <li>Select all elements with a class of "note".</li>
+        <li>Select the element with the ID of "footer".</li>
+        <li>Select all hyperlinks.</li>
+      </ul>
+    </li>
+    <li>
+      Transform this CSS rule into a jQuery selector and CSS manipulation (be
+      careful about quoting string values):
+      <code-block language="css">.right {
+  text-align: right;
+}
+      </code-block>
+    </li>
     <li>
       Run this jQuery snippet: <code>$("p").css("color", "red");</code> on
       <a href="http://jquery.com">jquery.com</a>. What type of style does this
