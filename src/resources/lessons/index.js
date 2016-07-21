@@ -27,6 +27,12 @@ export class LessonsIndex {
       title: '5. HTML & CSS',
       nav: true
     }, {
+      route: 'jquery',
+      name: 'jquery',
+      moduleId: 'resources/lessons/jquery',
+      title: '6. Using jQuery',
+      nav: true
+    }, {
       route: 'clock-project',
       name: 'clock-project',
       moduleId: 'resources/lessons/clock-project',
