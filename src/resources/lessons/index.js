@@ -15,6 +15,12 @@ export class LessonsIndex {
       title: '2. Variables & Conditionals',
       nav: true
     }, {
+      route: 'functions',
+      name: 'functions',
+      moduleId: 'resources/lessons/functions',
+      title: '4. Functions',
+      nav: true
+    }, {
       route: 'html-css',
       name: 'html-css',
       moduleId: 'resources/lessons/html-css',
