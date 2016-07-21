@@ -106,8 +106,10 @@ do {
   the block of code, but it provides a shorter syntax that is easier to type and
   read. It also provides <b>scoping</b> for our iterator, so we can reuse it.</p>
 
-  <code-block language="javascript">for (let i = 0; i < myPets.length; i += 1) {
-  console.log(myPets[iterator]);
+  <code-block language="javascript">// A common convention is to use i for the iterator in for loops.
+
+for (let i = 0; i < myPets.length; i += 1) {
+  console.log(myPets[i]);
 }
 
 // Output is:
