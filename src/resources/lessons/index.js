@@ -26,6 +26,12 @@ export class LessonsIndex {
       moduleId: 'resources/lessons/html-css',
       title: '5. HTML & CSS',
       nav: true
+    }, {
+      route: 'clock-project',
+      name: 'clock-project',
+      moduleId: 'resources/lessons/clock-project',
+      title: '9. Clock Project',
+      nav: true
     }]);
   }
 }
