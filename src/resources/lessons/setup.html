@@ -1,4 +1,6 @@
 <template>
+  <require from="resources/shared/code-block"></require>
+  
   <h1>Setup</h1>
   
   <p>
@@ -65,7 +67,7 @@
   </p>
   
   <ol>
-    <li>Go to <code>http://c9.io</code>.</li>
+    <li>Go to <a href="http://c9.io">http://c9.io</a>.</li>
     <li>
       Click the cat icon near the upper right corner.
       <ul>
@@ -88,9 +90,45 @@
   
   <h2>Creating your Workspace</h2>
   
-  <p>TODO: Fill this out.</p>
+  <p>
+    Once you have fully signed in to Cloud9, the next thing we need to do is to
+    create a workspace. Click on the "Create a new workspace" button to start
+    that process.
+  </p>
+  
+  <p>
+    For <i>Workspace name</i>, just put something like "tr-web-programming", and
+    for the <i>Description</i>, just put something like "I am so looking forward
+    to this class". We're kidding&mdash;put whatever you like.
+  </p>
+  
+  <p>
+    Choose "Hosted workspace", then choose "Public". (Don't worry, you won't be
+    putting anything important into your code.) Skip the "Clone from..."
+    section and choose the Blank template. Then, click "Create workspace" to
+    finish up.
+  </p>
   
   <h2>Installing Node.js</h2>
   
-  <p>TODO: Fill this out.</p>
+  <p>
+    Okay, actually, we already have Node.js available&mdash;the problem is that
+    we don't have the latest version.
+  </p>
+  
+  <p>
+    Make sure you have a <code>bash</code> <i>terminal window</i> open. Then
+    run the following commands one at a time (don't type <code>$</code>, that's
+    just a symbol for a command prompt):
+  </p>
+  
+  <code-block language="bash">
+$ nvm install 6.3.0
+$ nvm use 6.3.0
+$ nvm alias default 6.3.0
+  </code-block>
+  
+  <p>
+    And with that, you should be ready to go!
+  </p>
 </template>
