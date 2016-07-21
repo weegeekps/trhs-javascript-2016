@@ -1,0 +1,135 @@
+<template>
+  <require from="resources/shared/code-block"></require>
+
+  <h1>Loops</h1>
+
+  <h2>Introduction</h2>
+
+  <p>In this lesson we are learning about another essential <b>control
+  structure</b> in the JavaScript programming language. A <b>loop</b> is a
+  sequence of instructions that are repeated until a condition is reached. If
+  you've used other programming languages such as C++ or Java before, you may
+  be familiar with some of these loops. Before we can dive in however, we first
+  must briefly discuss our first <b>formal structure</b>, the
+  <code>array</code></p>
+
+  <h2>Arrays</h2>
+
+  <p><b>Arrays</b> are one of the most common structures in computer science,
+  and easily one of the most useful in a programmer's toolkit. They can hold a
+  series of objects that we can <b>iterate</b> through with our loops. Declaring
+  <b>arrays</b> in JavaScript is very easy.</p>
+
+  <code-block language="javascript">const myPets = ['cat', 'dog'];</code-block>
+
+  <p>The code example above declares an array with a length of 2. In order to
+  access <b>values</b> within our array we can use the following syntax:</p>
+
+  <code-block language="javascript">console.log(myPets[1]); // Prints 'dog'</code-block>
+
+  <p>Note that the the number between the brackets ([ and ]) is called an
+  <b>index</b>. The index of an array is <b>zero-based</b>, where 0 refers to
+  the first value in an array. In our <code>myPets</code> array, our dog is in
+  the second position, so in order to access that value we must use 1. If this
+  seems confusing, give it some time and it will begin to make sense. Practice
+  will make this easier.</p>
+
+  <!-- While -->
+  <h2>While</h2>
+
+  <p>The <code>while</code> loop is the most basic loop that we can use in
+  JavaScript. <b>While</b> loops take a <b>condition</b> and continue to perform the
+  actions within it's <b>block</b> as long as the condition evaluates to true.</p>
+
+  <code-block language="javascript">let iterator = 0;
+
+while (iterator < myPets.length) {
+  iterator += 1;
+  console.log(myPets[iterator]);
+}
+
+// Output is:
+//   cat
+//   dog</code-block>
+
+  <p>When using a <code>while</code> loop with a conditional it's important to
+  make sure to increment your iterator. If you don't you can end up in a
+  situation where you have an <b>infinite loop</b>! When this happens, you will
+  crash your user's environment or browser.</p>
+
+  <p>Another important part about <code>while</code> loops is that the condition
+  is <b>evaluated</b> <i>before</i> the block is executed. What if we want to
+  evaluate a condition <i>after</i> we execute our block?</p>
+
+  <!-- Do While -->
+  <h2>Do While</h2>
+
+  <p>For situations where we want to evaluate our condition after we execute
+  our code we can use a <code>do-while</code> loop. These are identical to
+  <code>while</code> loops except that the block executes before the condition
+  is evaluated.</p>
+
+  <code-block language="javascript">let iterator = 0;
+
+do {
+  iterator += 1;
+  console.log(myPets[iterator]);
+} while (iterator < myPets.length)
+
+// Output is:
+//   dog
+//   undefined</code-block>
+
+  <p>That's not right! The output should have been <i>cat</i> and <i>dog</i>!
+  However we <b>incremented</b> our iterator prior to attempting to print out
+  our pets. On the first call to <code>console.log</code> the value of iterator
+  is actually 1 rather than 0. We can fix this by simply moving our call to
+  increment below our <code>console.log</code> call.</p>
+
+  <code-block language="javascript">let iterator = 0;
+
+do {
+  console.log(myPets[iterator]);
+  iterator += 1;
+} while (iterator < myPets.length)
+
+// Output is:
+//   cat
+//   dog</code-block>
+
+  <!-- For -->
+  <h2>For</h2>
+
+  <p>The last kind of loop we're going to look at is the <code>for</code> loop.
+  This loop is likely the most used loop and easily the most versatile. It works
+  identical to the while loop in that it evaluates the condition before executing
+  the block of code, but it provides a shorter syntax that is easier to type and
+  read. It also provides <b>scoping</b> for our iterator, so we can reuse it.</p>
+
+  <code-block language="javascript">for (let i = 0; i < myPets.length; i += 1) {
+  console.log(myPets[iterator]);
+}
+
+// Output is:
+//   cat
+//   dog</code-block>
+
+  <p>In the code example above we have declared a <code>for</code> loop that
+  performs identically to our <code>while</code> loop. In the first line we see
+  3 pieces passed in; first a declaration of what we want to use as an iterator.
+  Second, we declare our condition for running, this is identical to the
+  condition we used before. Finally we have our increment call.</p>
+
+  <p>With a <code>for</code> loop we can always rest assured that our iterator
+  will always be incremented <i>after</i> our work is complete, so we can avoid
+  situations like we had with the <code>do while</code> loop.</p>
+
+  <h1>Exercises</h1>
+
+  <h2>Write an array</h2>
+
+  <h2>Use a while loop to print out all of the provided array</h2>
+
+  <h2>Convert a while loop to a for loop</h2>
+
+</template>
