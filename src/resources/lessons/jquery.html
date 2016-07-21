@@ -71,7 +71,7 @@
 &lt;/html&gt;
   </code-block>
   
-  <h2>The Power of jQuery</h2>
+  <h2>jQuery in Action</h2>
   
   <p>
     So how does jQuery actually work? We've said it allows you to manipulate
@@ -100,6 +100,97 @@ $("p")                    // &lt;-- Selects all paragraphs on the page
     and then makes a change. In this case, it changes a CSS style property on
     each paragraph element.
   </p>
+  
+  <p>
+    We will now explore some different use cases for manipulating HTML elements
+    with jQuery. Specifically, we will focus on:
+  </p>
+  
+  <ul>
+    <li>Using jQuery as the page loads</li>
+    <li>Using jQuery in response to user interaction</li>
+  </ul>
+  
+  <h3>Using jQuery as the page loads</h3>
+  
+  <p>
+    If you want to manipulate the page as soon as it has finished loading, you
+    can do so by wrapping your code in a jQuery document loaded check. Here is
+    an example of what that looks like:
+  </p>
+  
+  <code-block language="html">
+&lt;DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="//code.jquery.com/jquery-3.1.0.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is another paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is one last paragraph of text.&lt;/p&gt;
+    
+    &lt;script type="text/javascript"&gt;
+      $(function () {
+        $("p").css("color", "red");
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
+  
+  <p>
+    The most important thing in this example is the use of <code>$</code> right
+    at the beginning of the script block, where we pass in a
+    <code>function</code> declaration which contains our CSS manipulation.
+    The <code>$</code> function, when given a <b>callback function</b> as an
+    argument, will wait until the page is fully loaded and ready to go before
+    executing the code inside the function. This is super important and must
+    always be done before doing any jQuery selectors or manipulation. A good
+    rule of thumb is, every line of jQuery must be wrapped inside a call to the
+    <code>$</code> function.
+  </p>
+  
+  <h3>Using jQuery in response to user interaction</h3>
+  
+  <p>
+    Okay, it's pretty boring to just change all paragraphs at the same time,
+    and we could have just used CSS. Let's make things more interesting. What
+    if we want to leave our paragraphs their normal color, but turn them red if
+    the user clicks on them?
+  </p>
+  
+  <p>
+    Here's how we can do that:
+  </p>
+  
+  <code-block language="html">
+&lt;DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="//code.jquery.com/jquery-3.1.0.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is another paragraph of text.&lt;/p&gt;
+    
+    &lt;p&gt;This is one last paragraph of text.&lt;/p&gt;
+    
+    &lt;script type="text/javascript"&gt;
+      $(function () {
+        $("p").on("click", function () {    // When a paragraph is clicked...
+          $(this).css("color", "red");      // Get the clicked paragraph, set its color to red
+        };
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code-block>
   
   <h1>Exercises</h1>
   
