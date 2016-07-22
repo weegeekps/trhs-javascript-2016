@@ -5,5 +5,60 @@
 
   <h2>Clicking on Tiles</h2>
   
-  <p>TODO: Write!</p>
+  <p>Please follow each step completely. Use the other lessons and resources
+  (Mozilla Developer Network) to help you. You may also get help from your
+  classmates. Kevin and Adam will be able to help, so if you get stuck,
+  raise your hand to let them know.</p>
+  
+  <h3>Step 1</h3>
+  
+  <p>
+    Our goal for this module is to reveal our Pok&eacute;mon as tiles are
+    clicked. We will not implement the rules of Memory yet (i.e., we will not
+    check for matches or hide non-matching Pok&eacute;mon yet).
+  </p>
+  
+  <p>
+    The first thing we need to do is to create a click handler for all of the
+    tiles. Below is a hint on how to create the click handler:
+  </p>
+  
+  <code-block language="javascript">$(/* how to select by tile class? */).on("click", onClickTile);</code-block>
+  
+  <h3>L</h3>
+  
+  <p>
+    Inside the <code>onClickTile</code> function, we will use the jQuery
+    <code>.addClass()</code> method to add a few CSS classes to the tile that
+    was just clicked.
+  </p>
+  
+  <p>
+    This is also where we will start using the Pok&eacute;mon name that we
+    stored using jQuery's <code>.data()</code> method earlier. We will use that
+    Pok&eacute;mon name as a CSS class, which will help us show the
+    Pok&eacute;mon on the tile.
+  </p>
+  
+  <p>
+    First let's get the Pok&eacute;mon name for the tile in question:
+  </p>
+  
+  <code-block language="javascript">const pokemon = $(this).data("pokemon");</code-block>
+  
+  <p>
+    Then we need to add a few CSS classes to the tile:
+  </p>
+  
+  <code-block language="javascript">
+    $(this).addClass(pokemon);
+    $(this).addClass("revealed");
+  </code-block>
+  
+  <p>
+    The Pok&eacute;mon name helps us know which Pok&eacute;mon image to show on
+    the tile. The <code>"revealed"</code> class is used to tell the browser to
+    show the Pok&eacute;mon.
+  </p>
+  
 </template>
