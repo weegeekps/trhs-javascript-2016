@@ -32,6 +32,12 @@ export class FinalProjectIndex {
       moduleId: 'resources/final-project/module-5',
       title: '5. Clicking on Tiles',
       nav: true
+    }, {
+      route: 'memory-rules',
+      name: 'memory-rules',
+      moduleId: 'resources/final-project/module-6',
+      title: '6. Implementing Memory rules',
+      nav: true
     }]);
   }
 }
