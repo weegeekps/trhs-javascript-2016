@@ -103,9 +103,11 @@ for (let row = 0; row < gridSize; row += 1) {
 
   <h3>Step 7</h3>
 
-  <p>We now should append our "tile" variable to our "tilerow" div. We can use
-  the <code>.append()</code> function for this. The contents of your inner
-  for-loop should look like the code below:</p>
+  <p>
+    We now should append our <code>$tile</code> div to our <code>$tileRow</code>
+    div. We can use the <code>.append()</code> function for this. The contents of
+    your inner for-loop should look like the code below:
+  </p>
 
   <code-block language="javascript">
 var $tile = $(&quot;&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;&quot;);
@@ -119,35 +121,35 @@ $tileRow.append(tile);
   the <code>.append()</code> function here. You can pass <code>$tileRow</code>
   right into append, no HTML is needed here. Once you have done this, refresh
   your page.</p>
-  
+
   <p>
     The append code should look something like this:
   </p>
-  
+
   <code-block language="javascript">
 $(/* remember how to get the "tiles" element by its ID? */)
   .append($tileRow);
   </code-block>
-  
+
   <p>
     You should now see a 4 by 4 grid of tiles when you save your files and
     refresh the page.
   </p>
-  
+
   <h3>Sanity Check</h3>
-  
+
   <p>
     The overall structure of the JavaScript file should look something like this:
   </p>
-  
+
   <code-block language="javascript">
 $(function () {
   const gridSize = 4;
   
-  for (let column = 0; /* etc. for outer for loop */) {
+  for (let row = 0; /* etc. for outer for loop */) {
     const $tileRow = $(/* create a div tag */);
     
-    for (let row = 0; /* etc. for inner for loop */) {
+    for (let column = 0; /* etc. for inner for loop */) {
       const $tile = $(/* create a div tag */);
       
       $tileRow.append($tile);
@@ -158,6 +160,8 @@ $(function () {
 });
   </code-block>
 
-  <p>Once you have finished, please raise your hand so either Kevin or Adam can
-  check your work.</p>
+  <p>
+    Once you have finished, please raise your hand so either Kevin or Adam can
+    check your work.
+  </p>
 </template>
