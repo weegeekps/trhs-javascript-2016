@@ -2,7 +2,8 @@
   <require from="resources/shared/code-block"></require>
 
   <h1>Final Project</h1>
-  <h2>Module 3</h2>
+
+  <h2>Creating Tiles</h2>
 
   <p>Please follow each step completely. Use the other lessons and resources
   (Mozilla Developer Network) to help you. You may also get help from your
@@ -16,42 +17,71 @@
 
   <h3>Step 2</h3>
 
-  <p>We are going to use a concept called nested for loops to create an 4 by 4
-  grid of tiles for our memory game.  Inside of our jQuery function, and after
-  the call to <code>.empty()</code>, declare a variable called "gridsize".
-  Set it equal to 4.</p>
+  <p>We are going to use a concept called nested for loops to create a 4 by 4
+  grid of tiles for our memory game.  Inside of our jQuery function, after
+  the call to <code>.empty()</code>, declare a <code>const</code> variable called
+  <code>gridSize</code>. Set it equal to 4.</p>
 
   <h3>Step 3</h3>
 
-  <p>Now, start a for-loop. Name the variable for the for-loop "column" and set
-  it equal to 0. Have the for-loop run as long as the "column" variable is less
-  than the "gridsize" variable. Increment the column variable by 1 using the ++
-  operator. When you are finished, it should look like this:</p>
+  <p>Now, start a for-loop. Name the variable for the for-loop <code>column</code>
+  and set it equal to 0. Have the for-loop run as long as the <code>column</code>
+  variable is less than the <code>gridSize</code> variable. Increment the
+  <code>column</code> variable by 1 using the <code>+=</code> operator. When you
+  are finished, it should look like this:</p>
 
-  <code-block language="javascript">for (var column = 0; column < gridsize; column++) { }</code-block>
+  <code-block language="javascript">for (let column = 0; column < gridSize; column += 1) { }</code-block>
 
   <h3>Step 4</h3>
 
   <p>Inside the braces of this for loop, create a new <code>&lt;div&gt;</code>
-  element using jQuery and store it in a variable. Your code should look like
-  the code below:</p>
+  element using jQuery and store it in a variable.</p>
+  
+  <p>When using a variable to store a jQuery object, it is a good idea to prefix
+  the variable with <code>$</code>. This will help you remember that the variable
+  value is a jQuery object.</p>
+  
+  <p>When you have finished, your code should look like the code below:</p>
 
-  <code-block language="javascript">var tilerow = $(&quot;&lt;div class=&#39;tile-row&#39;&gt;&lt;/div&gt;&quot;);</code-block>
+  <code-block language="javascript">var $tileRow = $(&quot;&lt;div class=&#39;tile-row&#39;&gt;&lt;/div&gt;&quot;);</code-block>
+  
+  <p>
+    <b><i>Important:</i></b> At this point, your tile row has not been added to
+    the page. The div inside <code>$tileRow</code> is said to be <i>detached</i>
+    from the page. This is like when you write on a post-it note, but you haven't
+    stuck the post-it note on the wall. Our tile row exists, it just hasn't been
+    stuck on the "wall" (HTML page) yet.
+  </p>
 
   <h3>Step 5</h3>
 
-  <p>Right after the "tilerow" variable you just created, create another
-  <code>for-loop</code>, which we will refer to as the "inner for-loop".
-  Name the variable "row", set it to equal 0, and have the loop run as long as
-  row is less than "gridsize".  Increment "row" by 1 each iteration.  See if
-  you can figure out how to write this for loop on your own. If you get stuck,
+  <p>Right after the <code>$tileRow</code> variable you just created, create
+  another <code>for-loop</code>, which we will refer to as the <i>inner for-loop</i>.
+  Name the for-loop variable <code>row</code>, set it to equal 0, and have the
+  loop run as long as row is less than <code>gridSize</code>.  Increment
+  <code>row </code> by 1 each iteration.</p>
+  
+  <p>See if you can figure out how to write this for loop on your own. If you get stuck,
   ask for help.</p>
+  
+  <p>
+    The overall outer/inner loop structure should look like this:
+  </p>
+  
+  <code-block language="javascript">
+for (let column = 0; column < gridSize; column += 1) {
+  const $tileRow = /* ... */
+
+  for (let row /* that's all you get here :-), ask a classmate or Adam/Kevin if you need help */) {
+  }
+}
+  </code-block>
 
   <h3>Step 6</h3>
 
   <p>Inside the braces for the inner for-loop, we will again create a new
   <code>&lt;div&gt;</code> element using the same syntax as in Step 4. Name
-  your variable &quot;tile&quot;. The reasoning behind this will become clear
+  your variable <code>$tile</code>. The reasoning behind this will become clear
   in the next module. The HTML code you should have is below:</p>
 
   <code-block language="javascript">&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;</code-block>
@@ -62,15 +92,56 @@
   the <code>.append()</code> function for this. The contents of your inner
   for-loop should look like the code below:</p>
 
-  <code-block language="javascript">var tile = $(&quot;&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;&quot;); tilerow.append(tile);</code-block>
+  <code-block language="javascript">
+var $tile = $(&quot;&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;&quot;);
+$tileRow.append(tile);
+  </code-block>
 
   <h3>Step 8</h3>
 
   <p>Immediately after the inner for-loop, outside of the braces for it, append
-  the contents of "tilerow" to tiles. Again, you should use the
-  <code>.append()</code> function here. You can pass tilerow right into append,
-  no HTML is needed here. Once you have done this, refresh your page. You should
-  now see a 4 by 4 grid of tiles.</p>
+  the contents of <code>$tileRow</code> to the tiles div. Again, you should use
+  the <code>.append()</code> function here. You can pass <code>$tileRow</code>
+  right into append, no HTML is needed here. Once you have done this, refresh
+  your page.</p>
+  
+  <p>
+    The append code should look something like this:
+  </p>
+  
+  <code-block language="javascript">
+$(/* remember how to get the "tiles" element by its ID? */)
+  .append($tileRow);
+  </code-block>
+  
+  <p>
+    You should now see a 4 by 4 grid of tiles when you save your files and
+    refresh the page.
+  </p>
+  
+  <h3>Sanity Check</h3>
+  
+  <p>
+    The overall structure of the JavaScript file should look something like this:
+  </p>
+  
+  <code-block language="javascript">
+$(function () {
+  const gridSize = 4;
+  
+  for (let column = 0; /* etc. for outer for loop */) {
+    const $tileRow = $(/* create a div tag */);
+    
+    for (let row = 0; /* etc. for inner for loop */) {
+      const $tile = $(/* create a div tag */);
+      
+      $tileRow.append($tile);
+    }
+    
+    $(/* get "tiles" div by ID */).append($tileRow);
+  }
+});
+  </code-block>
 
   <p>Once you have finished, please raise your hand so either Kevin or Adam can
   check your work.</p>

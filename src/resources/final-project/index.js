@@ -15,10 +15,10 @@ export class FinalProjectIndex {
       title: '2. Creating our JavaScript File',
       nav: true
     }, {
-      route: 'module-3',
-      name: 'module-3',
+      route: 'creating-tiles',
+      name: 'creating-tiles',
       moduleId: 'resources/final-project/module-3',
-      title: 'Module 3',
+      title: '3. Creating Tiles',
       nav: true
     }]);
   }
