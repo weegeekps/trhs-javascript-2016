@@ -13,17 +13,6 @@
   <h3>Step 1</h3>
 
   <p>
-    Remove the <code>.append()</code> call we did in the last module. If you
-    refresh the page in your browser, your message should no longer be showing.
-  </p>
-
-  <p>
-    We will now be writing code for our <i>renderTiles</i> function.
-  </p>
-
-  <h3>Step 2</h3>
-
-  <p>
     We are going to use a concept called nested for loops to create a 4 by 4
     grid of tiles for our memory game.
   </p>
@@ -33,10 +22,10 @@
     to <code>.empty()</code>, let's add a call to <code>renderTiles()</code>.
   </p>
 
-  <h3>Step 3</h3>
+  <h3>Step 2</h3>
 
   <p>
-    Inside of our <code>renderTiles</code> function,declare a <code>const</code>
+    Inside of our <code>renderTiles</code> function, declare a <code>const</code>
     variable called <code>gridSize</code>. Set it equal to 4.</p>
   </p>
 
@@ -48,7 +37,7 @@
 
   <code-block language="javascript">for (let row = 0; row < gridSize; row += 1) { }</code-block>
 
-  <h3>Step 4</h3>
+  <h3>Step 3</h3>
 
   <p>Inside the braces of this for loop, create a new <code>&lt;div&gt;</code>
   element using jQuery and store it in a variable.</p>
@@ -69,7 +58,7 @@
     stuck on the "wall" (HTML page) yet.
   </p>
 
-  <h3>Step 5</h3>
+  <h3>Step 4</h3>
 
   <p>Right after the <code>$tileRow</code> variable you just created, create
   another <code>for-loop</code>, which we will refer to as the <i>inner for-loop</i>.
@@ -93,7 +82,7 @@ for (let row = 0; row < gridSize; row += 1) {
 }
   </code-block>
 
-  <h3>Step 6</h3>
+  <h3>Step 5</h3>
 
   <p>Inside the braces for the inner for-loop, we will again create a new
   <code>&lt;div&gt;</code> element using the same syntax as in Step 4. Name
@@ -101,7 +90,7 @@ for (let row = 0; row < gridSize; row += 1) {
 
   <code-block language="javascript">&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;</code-block>
 
-  <h3>Step 7</h3>
+  <h3>Step 6</h3>
 
   <p>
     We now should append our <code>$tile</code> div to our <code>$tileRow</code>
@@ -114,7 +103,7 @@ var $tile = $(&quot;&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;&quot;);
 $tileRow.append(tile);
   </code-block>
 
-  <h3>Step 8</h3>
+  <h3>Step 7</h3>
 
   <p>Immediately after the inner for-loop, outside of the braces for it, append
   the contents of <code>$tileRow</code> to the tiles div. Again, you should use
