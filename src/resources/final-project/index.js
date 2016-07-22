@@ -3,10 +3,10 @@ export class FinalProjectIndex {
     this.router = router;
 
     config.map([{
-      route: ['', 'module-1'],
-      name: 'module-1',
+      route: ['', 'setup'],
+      name: 'setup',
       moduleId: 'resources/final-project/module-1',
-      title: 'Module 1',
+      title: '1. Setup',
       nav: true
     }, {
       route: 'module-2',
