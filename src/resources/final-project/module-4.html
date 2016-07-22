@@ -1,7 +1,92 @@
 <template>
   <require from="resources/shared/code-block"></require>
+
+  <h1>Final Project</h1>
+
+  <h2>Assigning Pok&eacute;mon to Tiles</h2>
+
+  <p>Please follow each step completely. Use the other lessons and resources
+  (Mozilla Developer Network) to help you. You may also get help from your
+  classmates. Kevin and Adam will be able to help, so if you get stuck,
+  raise your hand to let them know.</p>
+
+  <h3>What's Next?</h3>
+
+  <p>
+    The next thing we need to do is to figure out which Pok&eacute;mon will be
+    placed on which tiles. To do this, we will write code into the
+    <code>assignPokemonToTiles</code> function in our JavaScript file. But
+    before we do that, we need to talk about our strategy for storing the
+    Pok&eacute;mon information.
+  </p>
+
+  <p>
+    Our tiles are laid out in a two-dimensional fashion (four rows by four
+    columns). However, in order to make things easier for us, our Pok&eacute;mon
+    information will be stored in a one-dimensional list. This basically means
+    we will have 16 Pok&eacute;mon names in one array, and every title will have
+    to know which index to use to match up with its Pok&eacute;mon information.
+  </p>
+
+  <p>
+    First, we will add index information to our tiles in the
+    <code>renderTiles</code> function, so that we can use it later on. Then we
+    will create our list of Pok&eacute;mon.
+  </p>
   
-  <h1>Assigning Pok&eacute;mon to Tiles</h1>
+  <h3>Step 1</h3>
+
+  <p>
+    Inside <code>renderTiles</code>, we need to make two changes:
+  </p>
+
+  <ul>
+    <li>Add an <code>index</code> variable at the beginning of the function</li>
+    <li>Set the index on each tile as we create it, and increment the index</li>
+  </ul>
+
+  <p>
+    First, let's create our <code>index</code> variable. We will use a
+    <code>let</code> declaration because we will be changing the value as we
+    create our tiles. This declaration should go before anything else in the
+    <code>renderTiles</code> function.
+  </p>
+
+  <h3>Step 2</h3>
+
+  <p>
+    Now that we have created our <code>index</code> variable, we will use it
+    and increment it as we create tiles.
+  </p>
+
+  <p>
+    Inside your <i>inner for loop</i>, after we create the <code>$tile</code>
+    but before we append it to <code>$tileRow</code>, we need to set our index
+    on the tile.
+  </p>
+
+  <p>
+    We can do this using the <code>.data()</code> function provided by jQuery.
+    The <code>.data()</code> function takes two arguments. First is the name of
+    our data point (which can be any string), and second is the value.
+  </p>
+
+  <p>
+    Add these lines between when we create the <code>$tile</code> variable and
+    when we append it to <code>$tileRow</code>:
+  </p>
   
+  <code-block language="javascript">
+    $tile.data("tileIndex", index);
+    index += 1;
+  </code-block>
+
+  <p>
+    Make sure to save all files and refresh your preview to make sure we haven't
+    broken anything.
+  </p>
+
+  <h3>Step 3</h3>
+
   <p>TODO: Write!</p>
 </template>
