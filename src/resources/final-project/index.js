@@ -26,6 +26,12 @@ export class FinalProjectIndex {
       moduleId: 'resources/final-project/module-4',
       title: '4. Assigning Pokémon to Tiles',
       nav: true
+    }, {
+      route: 'clicking-on-tiles',
+      name: 'clicking-on-tiles',
+      moduleId: 'resources/final-project/module-5',
+      title: '5. Clicking on Tiles',
+      nav: true
     }]);
   }
 }
