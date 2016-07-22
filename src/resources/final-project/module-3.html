@@ -12,25 +12,41 @@
 
   <h3>Step 1</h3>
 
-  <p>Remove the <code>.append()</code> call we did in the last module. If you
-  refresh the page in your browser, your message should no longer be showing.</p>
+  <p>
+    Remove the <code>.append()</code> call we did in the last module. If you
+    refresh the page in your browser, your message should no longer be showing.
+  </p>
+
+  <p>
+    We will now be writing code for our <i>renderTiles</i> function.
+  </p>
 
   <h3>Step 2</h3>
 
-  <p>We are going to use a concept called nested for loops to create a 4 by 4
-  grid of tiles for our memory game.  Inside of our jQuery function, after
-  the call to <code>.empty()</code>, declare a <code>const</code> variable called
-  <code>gridSize</code>. Set it equal to 4.</p>
+  <p>
+    We are going to use a concept called nested for loops to create a 4 by 4
+    grid of tiles for our memory game.
+  </p>
+
+  <p>
+    First, inside our jQuery function (below the stub functions, below the call
+    to <code>.empty()</code>, let's add a call to <code>renderTiles()</code>.
+  </p>
 
   <h3>Step 3</h3>
 
-  <p>Now, start a for-loop. Name the variable for the for-loop <code>column</code>
-  and set it equal to 0. Have the for-loop run as long as the <code>column</code>
+  <p>
+    Inside of our <code>renderTiles</code> function,declare a <code>const</code>
+    variable called <code>gridSize</code>. Set it equal to 4.</p>
+  </p>
+
+  <p>Now, start a for-loop. Name the variable for the for-loop <code>row</code>
+  and set it equal to 0. Have the for-loop run as long as the <code>row</code>
   variable is less than the <code>gridSize</code> variable. Increment the
-  <code>column</code> variable by 1 using the <code>+=</code> operator. When you
+  <code>row</code> variable by 1 using the <code>+=</code> operator. When you
   are finished, it should look like this:</p>
 
-  <code-block language="javascript">for (let column = 0; column < gridSize; column += 1) { }</code-block>
+  <code-block language="javascript">for (let row = 0; row < gridSize; row += 1) { }</code-block>
 
   <h3>Step 4</h3>
 
@@ -39,7 +55,7 @@
   
   <p>When using a variable to store a jQuery object, it is a good idea to prefix
   the variable with <code>$</code>. This will help you remember that the variable
-  value is a jQuery object.</p>
+  value is a jQuery object. This is just a convention and is not required.</p>
   
   <p>When you have finished, your code should look like the code below:</p>
 
@@ -57,9 +73,9 @@
 
   <p>Right after the <code>$tileRow</code> variable you just created, create
   another <code>for-loop</code>, which we will refer to as the <i>inner for-loop</i>.
-  Name the for-loop variable <code>row</code>, set it to equal 0, and have the
-  loop run as long as row is less than <code>gridSize</code>.  Increment
-  <code>row </code> by 1 each iteration.</p>
+  Name the for-loop variable <code>column</code>, set it to equal 0, and have the
+  loop run as long as <code>column</code> is less than <code>gridSize</code>.
+  Increment <code>column</code> by 1 each iteration.</p>
   
   <p>See if you can figure out how to write this for loop on your own. If you get stuck,
   ask for help.</p>
@@ -69,10 +85,10 @@
   </p>
   
   <code-block language="javascript">
-for (let column = 0; column < gridSize; column += 1) {
+for (let row = 0; row < gridSize; row += 1) {
   const $tileRow = /* ... */
 
-  for (let row /* that's all you get here :-), ask a classmate or Adam/Kevin if you need help */) {
+  for (let column /* that's all you get here :-), ask a classmate or Adam/Kevin if you need help */) {
   }
 }
   </code-block>
