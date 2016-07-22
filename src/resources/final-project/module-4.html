@@ -190,11 +190,35 @@ function assignPokemonToTiles() {
     Now we need to use <code>.data</code> to ensure that each tile knows what
     Pok&eacute;mon it holds.
   </p>
-  
+
   <p>
     In order to do this, we will use a <code>for</code> loop and iterate over
     <code>pokemonTiles</code>. We will use jQuery's <code>.data()</code>
     function for this. (We could just assign the Pok&eacute;mon names as CSS
     classes, but that means anyone can use Chrome Developer Tools to cheat!)
+  </p>
+
+  <p>
+    Write a <code>for</code> loop that goes from zero to
+    <code>gridSize * gridSize</code>.
+  </p>
+
+  <p>
+    Inside that loop, we want to look up the tile with the same index. This is
+    done using a selector we haven't covered yet called an attribute selector.
+    Below is what we need to put in the loop:
+  </p>
+
+  <code-block language="javascript">
+    var $tile = $("[data-index=" + i + "]");
+    $tile.data("pokemon", pokemonTiles[i]);
+  </code-block>
+
+  <h3>Step 6</h3>
+
+  <p>
+    Make sure the page still works. When you are done, raise your hand so that
+    Adam or Kevin can check on your work and make sure you're good to start the
+    next section.
   </p>
 </template>
