@@ -66,9 +66,7 @@
   </p>
 
   <p>
-    We can do this using the <code>.data()</code> function provided by jQuery.
-    The <code>.data()</code> function takes two arguments. First is the name of
-    our data point (which can be any string), and second is the value.
+    We can do this setting a <code>data-index</code> attribute on each tile.
   </p>
 
   <p>
@@ -77,7 +75,7 @@
   </p>
   
   <code-block language="javascript">
-    $tile.data("tileIndex", index);
+    $tile.attr("data-index", index);
     index += 1;
   </code-block>
 
@@ -117,4 +115,86 @@ $(function () {
   // functions such as renderTiles
 });
   </code-block>
+
+  <h3>Step 4</h3>
+
+  <p>
+    Now that we have our main source of Pok&eacute;mon names, we need to assign
+    those Pok&eacute;mon randomly to our tiles. We will do this in the
+    <code>assignPokemonToTiles</code> function.
+  </p>
+
+  <p>
+    First, let's create another variable, just below pokemonNames. This variable
+    will contain the actual Pok&eacute;mon tile assignments.
+  </p>
+
+  <code-block language="javascript">let pokemonTiles;</code-block>
+
+  <p>
+    Inside <code>assignPokemonToTiles</code>, we will start by creating a copy
+    of the <code>pokemonNames</code> variable and assigning it to
+    <code>pokemonTiles</code>. We use a function called <code>slice()</code> to
+    do that:
+  </p>
+
+  <code-block language="javascript">pokemonTiles = pokemonNames.slice();</code-block>
+
+  <p>
+    Then we need to <i>shuffle</i> the pokemonTiles array. This is where our
+    <code>shuffle</code> function comes in. We will give you the code for
+    shuffling an array:
+  </p>
+  
+  <code-block language="javascript">
+function shuffle(array) {
+    let counter = array.length;
+
+    // While there are elements in the array
+    while (counter > 0) {
+        // Pick a random index
+        let index = Math.floor(Math.random() * counter);
+
+        // Decrease counter by 1
+        counter--;
+
+        // And swap the last element with it
+        let temp = array[counter];
+        array[counter] = array[index];
+        array[index] = temp;
+    }
+
+    return array;
+}
+  </code-block>
+
+  <p>
+    Then make sure to call <code>shuffle</code> on the <code>pokemonTiles</code>
+    array.
+  </p>
+
+  <p>
+    Your <code>assignPokemonToTiles</code> function should look like this:
+  </p>
+
+  <code-block language="javascript">
+function assignPokemonToTiles() {
+  pokemonTiles = pokemonNames.slice();
+  shuffle(pokemonTiles);
+}
+  </code-block>
+
+  <h3>Step 5</h3>
+
+  <p>
+    Now we need to use <code>.data</code> to ensure that each tile knows what
+    Pok&eacute;mon it holds.
+  </p>
+  
+  <p>
+    In order to do this, we will use a <code>for</code> loop and iterate over
+    <code>pokemonTiles</code>. We will use jQuery's <code>.data()</code>
+    function for this. (We could just assign the Pok&eacute;mon names as CSS
+    classes, but that means anyone can use Chrome Developer Tools to cheat!)
+  </p>
 </template>
