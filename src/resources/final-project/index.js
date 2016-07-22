@@ -6,7 +6,7 @@ export class FinalProjectIndex {
       route: ['', 'setup'],
       name: 'setup',
       moduleId: 'resources/final-project/module-1',
-      title: '1. Setup',
+      title: '1. Initial Setup',
       nav: true
     }, {
       route: 'creating-javascript-file',
