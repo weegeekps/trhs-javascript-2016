@@ -1,5 +1,5 @@
 import {bindable} from 'aurelia-framework';
 
-export class LessonsNavigationCustomElement {
+export class VerticalNavigationCustomElement {
   @bindable router;
 }

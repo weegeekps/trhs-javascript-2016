@@ -15,6 +15,12 @@ export class App {
       title: 'Lessons',
       nav: true
     }, {
+      route: 'final-project',
+      name: 'final-project',
+      moduleId: 'resources/final-project/index',
+      title: 'Final Project',
+      nav: true
+    }, {
       route: 'resources',
       name: 'resources',
       moduleId: 'resources/resources',

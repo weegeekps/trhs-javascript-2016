@@ -1,0 +1,54 @@
+<template>
+  <require from="resources/shared/code-block"></require>
+
+  <h1>Final Project</h1>
+  <h2>Module 2</h2>
+
+  <p>Please follow each step completely. Use the other lessons and references
+  (Mozilla Developer Network) to help you. You may also get help from your
+  classmates. Kevin and Adam will be able to help, so if you get stuck,
+  raise your hand to let them know.</p>
+
+  <h3>Step 1</h3>
+
+  <p>Create a new Javascript file within the site directory called <code>game.js</code>.</p>
+
+  <h3>Step 2</h3>
+
+  <p>In your <i>index.html</i> file, add a new <code>&lt;script&gt;</code> tag
+  after the <code>&lt;script&gt;</code> tag for the jQuery file inside the
+  <code>&lt;head&gt;</code> section of the file.  This
+  <code>&lt;script&gt;</code> tag should have a src attribute of
+  <code>game.js</code>, and a type attribute of <code>text/javascript</code>.</p>
+
+  <h3>Step 3</h3>
+
+  <p>Inside your <code>game.js</code> file you have just created, perform a
+  jQuery call at the top of your file. This should have an anonymous function
+  within it. It should look something like this when you are done:</p>
+
+  <code-block language="javascript">$(function($) { });</code-block>
+
+  <h3>Step 4</h3>
+
+  <p>Inside the function you just created, remove the message from the
+  <code>&lt;div&gt;</code> tag with the id of &quot;tiles&quot;.
+  You can use the .empty() call after selecting the <code>&lt;div&gt;</code>
+  tag to do this.</p>
+
+  <p><a href="http://api.jquery.com/empty/">http://api.jquery.com/empty/</a></p>
+
+  <h3>Step 5</h3>
+
+  <p>You should now make a call to <code>.append()</code> a message of your choosing to the
+  <code>&lt;div&gt;</code> tag.</p>
+
+  <p><a href="http://api.jquery.com/append/">http://api.jquery.com/append/</a></p>
+
+  <h3>Step 6</h3>
+
+  <p>Using the preview mode in Cloud9, preview your page.</p>
+
+  <p>Once you have finished, please raise your hand so either Kevin or Adam can
+  check your work.</p>
+</template>

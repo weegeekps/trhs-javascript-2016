@@ -1,0 +1,77 @@
+<template>
+  <require from="resources/shared/code-block"></require>
+
+  <h1>Final Project</h1>
+  <h2>Module 3</h2>
+
+  <p>Please follow each step completely. Use the other lessons and references
+  (Mozilla Developer Network) to help you. You may also get help from your
+  classmates. Kevin and Adam will be able to help, so if you get stuck,
+  raise your hand to let them know.</p>
+
+  <h3>Step 1</h3>
+
+  <p>Remove the <code>.append()</code> call we did in the last module. If you
+  refresh the page in your browser, your message should no longer be showing.</p>
+
+  <h3>Step 2</h3>
+
+  <p>We are going to use a concept called nested for loops to create an 4 by 4
+  grid of tiles for our memory game.  Inside of our jQuery function, and after
+  the call to <code>.empty()</code>, declare a variable called "gridsize".
+  Set it equal to 4.</p>
+
+  <h3>Step 3</h3>
+
+  <p>Now, start a for-loop. Name the variable for the for-loop "column" and set
+  it equal to 0. Have the for-loop run as long as the "column" variable is less
+  than the "gridsize" variable. Increment the column variable by 1 using the ++
+  operator. When you are finished, it should look like this:</p>
+
+  <code-block language="javascript">for (var column = 0; column < gridsize; column++) { }</code-block>
+
+  <h3>Step 4</h3>
+
+  <p>Inside the braces of this for loop, create a new <code>&lt;div&gt;</code>
+  element using jQuery and store it in a variable. Your code should look like
+  the code below:</p>
+
+  <code-block language="javascript">var tilerow = $(&quot;&lt;div class=&#39;tile-row&#39;&gt;&lt;/div&gt;&quot;);</code-block>
+
+  <h3>Step 5</h3>
+
+  <p>Right after the "tilerow" variable you just created, create another
+  <code>for-loop</code>, which we will refer to as the "inner for-loop".
+  Name the variable "row", set it to equal 0, and have the loop run as long as
+  row is less than "gridsize".  Increment "row" by 1 each iteration.  See if
+  you can figure out how to write this for loop on your own. If you get stuck,
+  ask for help.</p>
+
+  <h3>Step 6</h3>
+
+  <p>Inside the braces for the inner for-loop, we will again create a new
+  <code>&lt;div&gt;</code> element using the same syntax as in Step 4. Name
+  your variable &quot;tile&quot;. The reasoning behind this will become clear
+  in the next module. The HTML code you should have is below:</p>
+
+  <code-block language="javascript">&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;</code-block>
+
+  <h3>Step 7</h3>
+
+  <p>We now should append our "tile" variable to our "tilerow" div. We can use
+  the <code>.append()</code> function for this. The contents of your inner
+  for-loop should look like the code below:</p>
+
+  <code-block language="javascript">var tile = $(&quot;&lt;div class=&#39;tile&#39;&gt;&lt;/div&gt;&quot;); tilerow.append(tile);</code-block>
+
+  <h3>Step 8</h3>
+
+  <p>Immediately after the inner for-loop, outside of the braces for it, append
+  the contents of "tilerow" to tiles. Again, you should use the
+  <code>.append()</code> function here. You can pass tilerow right into append,
+  no HTML is needed here. Once you have done this, refresh your page. You should
+  now see a 4 by 4 grid of tiles.</p>
+
+  <p>Once you have finished, please raise your hand so either Kevin or Adam can
+  check your work.</p>
+</template>
