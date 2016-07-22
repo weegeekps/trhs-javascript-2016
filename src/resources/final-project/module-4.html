@@ -88,5 +88,33 @@
 
   <h3>Step 3</h3>
 
-  <p>TODO: Write!</p>
+  <p>
+    The next thing we need to do is to come up with a list of our Pok&eacute;mon
+    names. We will have 8 Pok&eacute;, each of which will appear in two
+    different tiles.
+  </p>
+
+  <p>
+    Inside the jQuery function at the very top (above <code>renderTiles</code>),
+    let's declare a variable representing our Pok&eacute;mon names. Since we
+    have to name each Pok&acute;mon twice, the simplest way to do this is to
+    just name them explicitly:
+  </p>
+
+  <code-block language="javascript">
+$(function () {
+  const pokemonNames = [
+    "blastoise", "blastoise",
+    "charizard", "charizard",
+    "dragonite", "dragonite",
+    "gengar", "gengar",
+    "magikarp", "magikarp",
+    "mew", "mew",
+    "pikachu", "pikachu",
+    "venusaur", "venusaur"
+  ];
+
+  // functions such as renderTiles
+});
+  </code-block>
 </template>
