@@ -17,25 +17,48 @@
   the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.  Remember that the
   head and body tags must be within the html tags, and all tags have to have a
   closing tag.</p>
-
+  
   <h3>Step 2</h3>
+  
+  <p>
+    Create a new folder in your site directory called "styles". Inside that
+    folder, create a file called "memory.css".
+  </p>
+  
+  <p>
+    Open the "memory.css" file and copy everything in this block into the file:
+  </p>
+  
+  <code-block language="css">
+/* TODO: Add final CSS here */
+  </code-block>
+
+  <h3>Step 3</h3>
 
   <p>Inside the <code>&lt;head&gt;</code> tag, you need to have a <code>&lt;title&gt;</code> tag, and a
-  <code>&lt;link&gt;</code> tag for a stylesheet which we have already provided for you in
-  the correct directory.  Put a title of your choice inside the <code>&lt;title&gt;</code>
-  tag.  The href attribute for the link tag should be <code>main.css</code>.  If
-  you get stuck on how to do the <code>&lt;link&gt;</code> tag, you can use MDN for examples:</p>
+  <code>&lt;link&gt;</code> tag for the stylesheet you have created in the previous step.</p>
+  
+  <p>
+    Put a title of your choice inside the <code>&lt;title&gt;</code> tag. The
+    <code>href</code> attribute for the link tag should be
+    <code>styles/memory.css</code>.
+  </p>
+  
+  <p>
+    If you get stuck on how to do the <code>&lt;link&gt;</code> tag, you can use
+    MDN for examples:
+  </p>
 
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link</a></p>
 
-  <h3>Step 3</h3>
+  <h3>Step 4</h3>
 
   <p>You should also add a <code>&lt;script&gt;</code> tag below your <code>&lt;link&gt;</code> tag for
   jquery. It should look like this:</p>
 
   <code-block language="html">&lt;script type=&quot;text/javascript&quot; src=&quot;//code.jquery.com/jquery-3.1.0.min.js&quot;&gt;&lt;/script&gt;</code-block>
 
-  <h3>Step 4</h3>
+  <h3>Step 5</h3>
 
   <p>Inside the <code>&lt;body&gt;</code> tag, you need several elements. We will split this
   into multiple steps. Create an <code>&lt;h1&gt;</code> element at immediately after the
@@ -43,7 +66,7 @@
 
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements</a></p>
 
-  <h3>Step 5</h3>
+  <h3>Step 6</h3>
 
   <p>After your page heading you just created in Step 4, create two
   <i>paragraph</i> tags.  The first one should contain the text "Moves Taken:",
@@ -67,19 +90,19 @@
     <p>Pairs Found: <span id="pairs-found"></span></p>
   </code-block>
 
-  <h3>Step 6</h3>
+  <h3>Step 7</h3>
 
   <p>Next, create a <code>&lt;div&gt;</code> tag with an id attribute of <code>tiles</code>.
   You should also put a temporary message inside the div tag. In a future
   module, we will remove the temporary message and display all of the tiles for
   the game inside of this <code>&lt;div&gt;</code> tag.</p>
 
-  <h3>Step 7</h3>
+  <h3>Step 8</h3>
 
   <p>Finally, you should create a <code>&lt;button&gt;</code> element with the text
   &quot;Reset Game&quot;, and an id attribute equal to &quot;reset&quot;.</p>
 
-  <h3>Step 8</h3>
+  <h3>Step 9</h3>
 
   <p>Using the preview mode in Cloud9, preview your page.</p>
 
