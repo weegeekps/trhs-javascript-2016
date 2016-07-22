@@ -139,25 +139,26 @@ $(/* remember how to get the "tiles" element by its ID? */)
   <h3>Sanity Check</h3>
 
   <p>
-    The overall structure of the JavaScript file should look something like this:
+    The overall structure of the <code>renderTiles</code> function should look
+    something like this:
   </p>
 
   <code-block language="javascript">
-$(function () {
-  const gridSize = 4;
-  
-  for (let row = 0; /* etc. for outer for loop */) {
-    const $tileRow = $(/* create a div tag */);
-    
-    for (let column = 0; /* etc. for inner for loop */) {
-      const $tile = $(/* create a div tag */);
-      
-      $tileRow.append($tile);
+  function renderTiles() {
+    const gridSize = 4;
+
+    for (let row = 0; /* etc. for outer for loop */) {
+      const $tileRow = $(/* create a div tag */);
+
+      for (let column = 0; /* etc. for inner for loop */) {
+        const $tile = $(/* create a div tag */);
+
+        $tileRow.append($tile);
+      }
+
+      $(/* get "tiles" div by ID */).append($tileRow);
     }
-    
-    $(/* get "tiles" div by ID */).append($tileRow);
   }
-});
   </code-block>
 
   <p>
