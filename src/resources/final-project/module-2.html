@@ -12,21 +12,37 @@
 
   <h3>Step 1</h3>
 
-  <p>Create a new Javascript file within the site directory called <code>game.js</code>.</p>
+  <p>
+    Create a new folder in your top-level workspace directory called "scripts".
+  </p>
+  
+  <p>
+    Inside that new folder, create a new file called <code>memory.js</code>.
+  </p>
 
   <h3>Step 2</h3>
 
-  <p>In your <i>index.html</i> file, add a new <code>&lt;script&gt;</code> tag
-  after the <code>&lt;script&gt;</code> tag for the jQuery file inside the
-  <code>&lt;head&gt;</code> section of the file.  This
-  <code>&lt;script&gt;</code> tag should have a src attribute of
-  <code>game.js</code>, and a type attribute of <code>text/javascript</code>.</p>
+  <p>
+    In your <i>index.html</i> file, we will add a <code>&lt;script&gt;</code>
+    tag at the bottom of the <code>&lt;body&gt;</code>.
+  </p>
+  
+  <p>
+    This <code>&lt;script&gt;</code> tag should have a src attribute of
+    <code>scripts/memory.js</code>, and a type attribute of
+    <code>text/javascript</code>.
+  </p>
 
   <h3>Step 3</h3>
 
-  <p>Inside your <code>game.js</code> file you have just created, perform a
-  jQuery call at the top of your file. This should have an anonymous function
-  within it. It should look something like this when you are done:</p>
+  <p>
+    Inside your <code>memory.js</code> file, perform a jQuery call at the top of
+    your file. This should have an anonymous function within it.
+  </p>
+
+  <p>
+    It should look something like this when you are done:
+  </p>
 
   <code-block language="javascript">$(function() { });</code-block>
 
