@@ -9,10 +9,10 @@ export class FinalProjectIndex {
       title: '1. Setup',
       nav: true
     }, {
-      route: 'module-2',
-      name: 'module-2',
+      route: 'creating-javascript-file',
+      name: 'creating-javascript-file',
       moduleId: 'resources/final-project/module-2',
-      title: 'Module 2',
+      title: '2. Creating our JavaScript File',
       nav: true
     }, {
       route: 'module-3',
